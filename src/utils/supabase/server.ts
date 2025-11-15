@@ -28,3 +28,22 @@ export async function createClient(admin?: boolean) {
     },
   });
 }
+/**
+ * The Supabase project URL used to initialize the Supabase client.
+ *
+ * This should be the HTTPS endpoint for your project (for example: "https://<project-ref>.supabase.co").
+ * It is combined with a Supabase key to form authenticated requests to the REST, Realtime, and Storage APIs.
+ *
+ * Expectations:
+ * - Must be a valid HTTPS URL.
+ * - Host should include the "supabase.co" domain.
+ *
+ * Usage:
+ * - Provide via an environment variable (e.g., SUPABASE_URL) and avoid hard-coding in source.
+ * - Pair with an appropriate key (anon key for client-side use, service role key for trusted server operations).
+ *
+ * Security:
+ * - The URL is not secret, but associated API keys are sensitive and must be kept confidential.
+ */
+const SUPABASE_URL=https://your-project.supabase.co
+SUPABASE_KEY=your-anon-or-service-role-key
